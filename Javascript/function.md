@@ -9,7 +9,7 @@
 
 BUT 아래와 같은 <code class="notranslate">함수 표현식</code>은 호이스팅 되지 않음.
 
-예시코드
+예시 코드
 ~~~js
 sayHello(); // 에러: sayHello is not a function
 
@@ -31,6 +31,8 @@ const로 선언된 변수 : 상수. 재할당 불가능
 
 
 - var
+  
+예시 코드
 ~~~js
 var x = 5;
 if (true) {
@@ -42,6 +44,8 @@ console.log(x); // 출력: 10
 블록 스코프 개념이 없으므로 x에 10이 할당 됨
 
 - let
+
+예시 코드
 ~~~js
 let y = 5;
 if (true) {
@@ -53,6 +57,8 @@ console.log(y); // 출력: 5 (블록 스코프로 인해 변수가 격리됨)
 if 블록 내부에서 선언된 y변수는 블록종료시 사라짐
 
 - const
+  
+예시 코드
 ~~~js
 const pi = 3.14159; 
 

@@ -47,7 +47,7 @@
     setAttribute: 엘리먼트의 속성을 정의
     removeChild: 노드를 삭제
 
-예시코드
+예시 코드
 ~~~html
 <!DOCTYPE html>
 <html>
