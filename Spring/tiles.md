@@ -87,7 +87,7 @@ menu-tiles.xml
     <version>3.0.8</version>
 </dependency>
 ```
-<span style='background-color:#ffdce0'>tiles-jsp, tiles-servlet, spirng 간의 버전 호환성 확인이 필요함.</span>
+<mark>tiles-jsp, tiles-servlet, spirng 간의 버전 호환성 확인이 필요함.</mark>
 
 2. 예시 코드의 mainTemplate.jsp 와 같이 레이아웃을 만들 페이지에서 taglib을 사용하여 insertAttribute 한다. 
 
