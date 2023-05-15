@@ -16,7 +16,7 @@
 
 
 1. 클라이언트가 HTTP 요청(웹은 대부분 GET or POST) 
-2. 서블릿 컨테니어에 요청이 도착하면 컨테이너에서 서블릿 객체 생성
+2. 서블릿 컨테이너에 요청이 도착하면 컨테이너에서 서블릿 객체 생성
 3. init() 메소드가 딱 한 번 호출되며 서블릿 객체를 초기화한다.
 4. service() 메소드를 호출해 doPost() 혹은 doGet()메소드로 전달된다.
 5. doPost()혹은 doGet() 메소드는 클라이언트 요청을 처리하여, HTTP 응답을 생성한다.
@@ -27,16 +27,16 @@
 > 클라이언트가 최초 요청한 서블릿을 응답하지 않고 다른 웹 어플리케이션(HTML, JSP, 다른 서블릿)이 응답하도록 재요청하는 것을 의미
 
 1. 데이터 공유
-- page(현재 페이지 공유)
-- request(한 번 실행하여 응답되는 모든 페이지 공유. jsp에서는 include)
-- session(인터넷 창을 닫기 전까지 혹은 세션 시간이 만료될때 까지 공유)
-- application(웹 애플리케이션이 시작될때 생성되어 전체에 공유)
+   - page(현재 페이지 공유)
+   - request(한 번 실행하여 응답되는 모든 페이지 공유. jsp에서는 include)
+   - session(인터넷 창을 닫기 전까지 혹은 세션 시간이 만료될때 까지 공유)
+   - application(웹 애플리케이션이 시작될때 생성되어 전체에 공유)
 
 2. 메서드  
 scope객체.setAttribute("공유할이름",객체명);
 
 3. 요청 재지정    
-   1. response.sendRedirect
-   2. RequestDispatcher의 forward(서블릿에서 주로 사용)
-   3. RequestDispatcher의 include(JSP에서 주로 사용)
+   - response.sendRedirect
+   - RequestDispatcher의 forward(서블릿에서 주로 사용)
+   - RequestDispatcher의 include(JSP에서 주로 사용)
 
