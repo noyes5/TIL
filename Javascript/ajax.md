@@ -15,15 +15,16 @@ exam.js
 ```js
 $.ajax({
 url: "/erp/ajax/gugu", // 요청이 전송될 URL 주소
-type: "GET",    // http요청방식
+type: "GET",    // http요청방식(GET or POST)
 data: {key : value}, // 요청 시 보내는 데이터
+                     // (처리할 데이터가 여러개인 경우 json으로 정의)
 dataType : 'json', // 응답데이터 형식(명시하지 않으면 자동 추측)
 success: function (data) {
     // ajax로 요청하는 경우 response되는 데이터는 무조건 success에서
     // 실행되는 함수 내부에서만 사용할 수 있다.
     $("#result2").html(data);
 },
-error: function (obj, msg, statusMsg) {},
+error: function (obj, msg, statusMsg) {}, //실패하였을때 호출되는 함수
 });
 
 ```
