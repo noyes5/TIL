@@ -1,26 +1,14 @@
 ## Util
 
-### 정규식 검증
+### 정규식
+
+- 3자리씩 끊는 것이 필요할 때
 
 ```
-public static final Pattern NUMBER_REGEX = Pattern.compile("^[1-9]+$");
+private static final String CASH_PRIZE_REGEX = "\\B(?=(\\d{3})+(?!\\d))";
 
-private static boolean isNumeric(String input) {
-    try {
-        Integer.parseInt(input);
-        return true;
-    } catch (NumberFormatException exception) {
-        return false;
-    }
-}
-
-public static void validateUserNumber(String input) {
-    if (!isNumeric(input)) {
-        throw new IllegalArgumentException(INVALID_NUMERIC_INPUT.getMessage());
-    }
-    if (!NUMBER_REGEX.matcher(input).matches()) {
-        throw new IllegalArgumentException(INVALID_NUMBER_RANGE.getMessage());
-    }
+private static String formatPrize(int prize) {
+    return String.valueOf(prize).replaceAll(CASH_PRIZE_REGEX, ",");
 }
 ```
 
