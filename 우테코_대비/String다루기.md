@@ -5,7 +5,7 @@
 - 자바에서 제공하는 lineSeparator() 사용
 
 ```
-public static final String LINE_SEPARATOR = System.lineSeparator();
+ private static final String NEW_LINE = System.lineSeparator();
 ```
 
 ### 앞뒤와 중간에 구분자가 필요한 경우
