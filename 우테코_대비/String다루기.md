@@ -14,6 +14,7 @@
 ### 앞뒤와 중간에 구분자가 필요한 경우
 
 - StringJoiner 사용
+- 간단하게 사용할 때는 String.join(,,,); 도 가능하다.
 
 ```
 public static final String BRIDGE_START = "[ ";
