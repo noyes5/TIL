@@ -25,3 +25,15 @@ public static void validateUserNumber(String input) {
     }
 }
 ```
+
+- 추상 클래스 활용할 경우
+
+```
+public class Validator {
+    protected static void validateBlank(final String input) {
+        if (input == null || input.strip().isEmpty()) {
+            throw new IllegalArgumentException(INVALID_INPUT_BLANK.getMessage());
+        }
+    }
+}
+```
