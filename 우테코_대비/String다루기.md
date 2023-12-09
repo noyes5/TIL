@@ -28,12 +28,20 @@ StringJoiner result = new StringJoiner(BRIDGE_SEPARATOR, BRIDGE_START, BRIDGE_EN
 
 ```
 public class StringUtils {
-    public static boolean isBlank(String name) {
-        return name == null || name.strip().isEmpty();
+    private static final String COMMA = ",";
+    private static final String SPACE = " ";
+    private static final String NO_SPACE = "";
+
+    public static String removeSpace(String input) {
+        return input.replaceAll(SPACE, NO_SPACE);
     }
 
-    public static String[] splitByDelimiter(String carNames) {
-        return carNames.split(",");
+    public static List<String> splitByComma(String input) {
+        return Arrays.asList(removeSpace(input).split(COMMA));
+    }
+
+    public static boolean isBlank(String name) {
+        return name == null || name.strip().isEmpty();
     }
 }
 ```
